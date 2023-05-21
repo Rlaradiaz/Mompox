@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple-dark: #170312;
+    --purple-medium: #33032d;
+    --purple-light: #531253;
+    --gray-light: #eaeaea;
+    --white: #f4ffdd;
+}
+body {
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif
+
+}
+
+p {
+    font-size: 22px;
+}
+
+.contenido-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/iglesia.jpg);
+    background-position: center;
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-size: 20px;
+}
+.contenido-header .fondo {
+    width: 0%;
+    height: 100%;
+    max-width: 200%;
+    
+    background-attachment: fixed;
+    
+    
+
+    background-image: url(../img/Mompoxfil.jpg);
+
+}
+.contenido-header .texto {
+    width: calc(100vw - 20px);
+    height: 100%;
+    font-size: 90px;
+    font-weight: 400;
+    font-family: 'serif';
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--black);
+    mix-blend-mode: multiply;
+
+
+}
+/*Menu*/
+
+.menu {
+    background-color: var(--purple-medium);
+    width:100%;
+    position: sticky;
+    top:0; 
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'serif';
+    font-style: italic;
+    margin-bottom: 60px;
+}
+.menu a {
+    display: inline-block;
+    padding: 10px 30px;
+    font: size 26px; 
+    background-color: var(--purple-medium);
+    margin: 0 10px;
+    transition: .5s ease all;
+    color: var(--gray-light);
+    text-decoration: none ;
+
+}
+.menu a:hover {
+    transform: translateY(18px);
+    background-color: var(--purple-light);
+}
+.nosotros {
+    margin-bottom: 60px;
+}
+
+   
+
+    .subtitulo {
+        font-size: 20px;
+        color: var(--purple-light);
+        font-family: serif;
+        font-weight: 700;
+        z-index: 2;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    
+
+    }
+    .subtitulo span {
+        background-color: var(--gray-light) ;
+        padding: 0 15px;
+        z-index: 99;
+        position: relative;
+    }
+    .subtitulo::after{
+        content: "";
+        display: inline-block;
+        height: 2px;
+        width: 100%;
+        background: var(--purple-dark);
+        position: relative;
+        top: -29px;
+        z-index: 1;
+    }
+    .nosotros .titulo {
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+
+    }
+    .nosotros .enlace {
+        display: inline-block;
+        margin-top: 40 px;
+        color: var(--purple-light);
+        font-weight: 700;
+        border-bottom: 1px solid transparent;
+        transition: .3s ease all;
+
+    }
+
+    .nosotros .enlace:hover {
+        text-decoration: none;
+        letter-spacing: 3px;
+        border-bottom: 1px solid var(--purple-light);
+    }
+
+
+
+    /*productos*/
+
+    .productos {
+
+        background: var(--gray-light);
+        padding: 20px;
+        margin-bottom: 60px;
+
+    }
+    .productos .titulo {
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+       
+        
+    }
+    .productos .producto {
+        position: relative;
+        width: 100%;
+        
+    }
+    .productos .overlay  {
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--purple-light);
+        overflow: hidden;
+        transition: .5s ease;
+
+    }
+    .productos .producto:hover .overlay {
+        width: 100%;
+        opacity: .8;
+    }
+    .productos .producto .overlay-texto {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        white-space: nowrap;
+        color: var(--white);
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white) ;
+
+    }
+
+    .productos .btn-productos {
+        background-color: var(--purple-light);
+        color: white;
+        padding: 7px 20px;
+        text-transform: uppercase;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: .3s ease;
+    }
+        .productos .producto .btn-productos:hover {
+            background-color:transparent ;
+            border: 2px solid var(--purple-light);
+        }
+
+    .separador {
+        width: 100%;
+        height: 200px;
+        background-image: url(../img/cementerio.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-bottom: 200px;
+
+    }
+    .separador p {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-family: serif;
+        padding: 10px;
+
+        
+    }
+    .acerca-de img{
+        align-items: center;
+        height: 100%;
+        width: 200px;
+        padding: 15px;
+        background-position: center;
+        border-radius: 100;
+        transition: .3s ease all;
+
+    }
+    .galeria {
+        margin-bottom: 60px;
+
+    }
+    .galeria img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover ;
+
+    }
+    .contacto {
+        margin-bottom: 60px;
+        
+    }
+    .contacto img {
+        align-items: center;
+        height: 100%;
+        width: 50px;
+        padding: 5px;
+        background-position: center;
+        border-radius: 100;
+    }
+    .redes-sociales {
+        padding: 10px;
+        background-color: var(--purple-light);
+    }
+    .redes-sociales img {
+        align-items: center;
+        height: 100%;
+        width: 50px;
+        padding: 5px;
+        background-position: center;
+        border-radius: 100;
+        transition: .3s ease all;
+    }
+
+    .redes-sociales img:hover {
+        transform:scale(1.2) ;
+
+
+    }
+    @media screen and (max-width: 992px)     {
+        p{
+            font-size: 18px;
+        }
+    .contenido-header .texto {
+        font-size: 60px;
+    }    
+    }
+
+
